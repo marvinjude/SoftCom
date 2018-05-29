@@ -1,0 +1,143 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//Product Card
+@import './product-card';
+
+//off canvas
+@import './offcanvas';
+
+//Material Design Icon
+@import '~@mdi/font/scss/materialdesignicons.scss';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(253, 62, 62, 0.05);
+}
+body{
+  box-sizing: border-box;
+}
+
+
+// Edit From Here
+.__container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  font-size: 2em;
+  background-color: #011b33;
+}
+
+.__container-inner {
+  padding: 40px;
+  display: inline-block;
+}
+
+.__card {
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+  width: 300px;
+  margin: 6px;
+  height: 150px;
+  box-shadow: 0 1px 1.5px 0 #000100;
+}
+
+.__card img {
+  width: 100%;
+  height: 100%;
+}
+
+.__card-desc {
+  z-index: 1;
+  font-size: 40px;
+  position: absolute;
+  color: #ffffffa1;
+  top: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+.__card-desc button {
+  border: 2px solid #ffc107f7;
+  background: rgba(10, 10, 10, 0.06);
+  color: #ffc107f7;
+  width: 100px;
+  padding: 10px 0px 10px 0px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.__cards-container {
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  max-height: 250px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #9e9e9e05;
+}
+
+.__container-inner button {
+  background-color: #ffc107f7;
+  color: white;
+  border: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+  font-size: 24px;
+  margin: 0 auto;
+  display: block;
+}
+
+.__container-inner h1 {
+  text-align: right;
+  font-size: 60px;
+  font-family: $font-family-sans-serif;
+  padding-right: 5px;
+}
+
+.__container-inner p {
+  color: #b9b6b6;
+  font-size: 20px;
+  line-height: 1.2em;
+  max-width: 83vh;
+  margin-top: 20px;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.__cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.__container h1 {
+  margin-top: 0px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: $font-size-base;
+}
+
