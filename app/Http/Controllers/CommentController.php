@@ -12,4 +12,13 @@ class CommentController extends Controller
        Comment::create($request->all());
        return redirect()->back();
     }
+    protected function validator(array $data){
+            return Validator::make($data, [
+            'topic' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'comment' => 'required|string',
+        ]);
+    }
+
 }
+
