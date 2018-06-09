@@ -8,7 +8,7 @@
         @foreach($softwares as $software)
         <div class="col-md-3">
             <div class="__product-card">
-                <img src="{{asset('storage/images/health.png')}}" alt="">
+                <img src="https://source.unsplash.com/random" alt="">
                 <section class="product-card-inner">
                     <p class="product-name">{{$software->name}}</p>
                     <p class="product-details">{{$software->description}}</p>
