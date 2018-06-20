@@ -25,7 +25,7 @@
             <a class='btn btn-warning btn-lg m-2 text-white' role="button" href={{url( '/logout')}} onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">logout</a>
 
-            @else
+            @else 
             <a class='btn btn-warning btn-lg m-2 text-white' role="button" href={{url( '/login')}}>Login</a>
         </div>
         @endauth

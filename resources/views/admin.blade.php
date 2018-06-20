@@ -43,7 +43,7 @@
                     Most Rated Software
                 </div>
                 <div class="card-body">
-                    <h3><a href="www.something.com">{{$mostRatedProduct->name}}</a></h1>
+                    <h3><a href="{{url('/software/' .$mostRatedProduct->id)}}">{{$mostRatedProduct->name}}</a></h1>
                      <p class = "d-inline">{{$mostRatedProduct->downloads}}
                         <span class = "text-white mdi mdi-download"></span>
                      </p> 
