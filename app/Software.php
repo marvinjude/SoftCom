@@ -9,8 +9,12 @@ class Software extends Model
     protected $table = 'software';
 
 
-    public function getComments(){
+    public function comments(){
         return $this->hasMany('App\Comment')->get();
+    }
+
+    public function category(){
+        return $this->belongsTo('App\SoftwareCategory');
     }
 }
 

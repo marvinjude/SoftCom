@@ -1,4 +1,5 @@
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-purple mb-2">
+@if(Auth::check())
+<nav class="navbar navbar-expand-lg  navbar-dark bg-purple ">
         <a class="navbar-brand mr-auto mr-lg-0" href="#">
             <img style = "width:30px;height:30px" src="{{asset('storage/images/firebase.png')}}" alt="">
         </a>
@@ -22,21 +23,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Switch account</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" style= "float:right">
                     <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Settings</a>
+                        aria-expanded="false">Marvin jude</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Logout</a>
                     </div>
                 </li>
             </ul>
             @if (Request::is('softwares'))
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+                <form class="form-inline my-2 my-lg-0" action = "{{route('softwares')}}" method="GET">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name = "term">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
             @endif
         </div>
     </nav>
+@endif

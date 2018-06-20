@@ -30,10 +30,10 @@ const app = new Vue({
  * Here We Will Setup The Typing Effect On The Home Screen
  */
 
-let typed = new Typed("#typedText", {
-    strings: ["Where Work Happens", "Where Work Begins", "Where Work Revolves"],
-    smartBackspace: true, // Default value
-    loop: true,
-    backSpeed: 200
-});
+// let typed = new Typed("#typedText", {
+//     strings: ["Where Work Happens", "Where Work Begins", "Where Work Revolves"],
+//     smartBackspace: true, // Default value
+//     loop: true,
+//     backSpeed: 200
+// });
 

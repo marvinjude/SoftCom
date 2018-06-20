@@ -10072,7 +10072,6 @@ body {
 
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
-    position: fixed;
     top: 56px;
     /* Height of navbar */
     bottom: 0;
@@ -10098,8 +10097,6 @@ body {
 }
 
 .nav-scroller {
-  position: relative;
-  z-index: 2;
   height: 2.75rem;
   overflow-y: hidden;
   top: 7%;
@@ -19441,7 +19438,19 @@ body {
 
 .__container-inner {
   padding: 40px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .__card {
@@ -19507,6 +19516,13 @@ body {
   background: #9e9e9e05;
 }
 
+.__cards-container h1 {
+  text-align: center;
+  font-size: 30px;
+  color: grey;
+  font-family: Raleway, san-serif;
+}
+
 .__container-inner button {
   background-color: #ffc107f7;
   color: white;
@@ -19531,7 +19547,7 @@ body {
 .__container-inner p {
   color: #b9b6b6;
   font-size: 20px;
-  line-height: 1.2em;
+  line-height: 1.3em;
   max-width: 83vh;
   margin-top: 20px;
   padding: 20px;

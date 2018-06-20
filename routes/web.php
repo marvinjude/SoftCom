@@ -12,22 +12,28 @@
 */
 
 
-Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');;
 
-Route::get('/softwares','HomeController@softwares');
+Route::get('/softwares','HomeController@softwares')->name('softwares');
 
 Route::get('/software/{id}', 'HomeController@software')->name('product');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Group Routes For Auth Only
 
 Route::get('/upload', "UploadController@index")->name('upload');
 
-Route::get('dashboard', "DashboardController@index")->name('dashboard');
+Route::get('/dashboard', "DashboardController@index")->name('dashboard');
 
-Route::post('software/star', "SoftwareController@star")->name('star') ;
+Route::post('/software/star', "SoftwareController@star")->name('star') ;
 
-Route::post('comment/create', "CommentController@create")->name('create_comment');
+Route::post('/comment/create', "CommentController@create")->name('create_comment');
+
+//End Route Group
+
+Route::get('/done', "HomeController@downloaded");
+
+Route::get('/admin', "AdminController@index"); //middleware  is In controller
 
 

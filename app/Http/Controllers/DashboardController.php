@@ -8,6 +8,12 @@ use Auth;
 
 class DashboardController extends Controller
 {
+
+    public function __construct(){
+        //Redirect Adminisrators To The Admin Page
+        $this->middleware('admin');
+    }
+
     public function index(){
         return view('dashboard')->with($this->dashboardData());
     }

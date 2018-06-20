@@ -29,6 +29,7 @@
 
         <div class='row card-body'>
             <div class="col-md-12">
+            <h2>Review This Software</h2>
                 <div class="list-group">
                     @foreach($comments as $comment)
                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -46,7 +47,7 @@
                             @csrf
                             <input type="hidden" name = "software_id" value="{{$software->id}}">
                              <div class="form-group row">
-                                <label for="topic" class="col-md-4 col-form-label pl-0">{{ __('Topic') }}</label>
+                                <label for="topic" class="col-md-4 col-form-label pl-0">{{ __('Title') }}</label>
                                 <input id="topic" name = "topic" type="text" class="form-control" required/>
                             </div>
                             <div class="form-group row">

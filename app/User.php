@@ -30,4 +30,13 @@ class User extends Authenticatable
     public function software(){
         return $this->hasMany('App\Software', 'author_id')->get();
     }
+
+    public function isAdmin(){
+        return $this->admin;
+    }
+
+    //Totals stars For Products  Uploaded By This User
+    public function stars(){
+        return $this->software()->sum('stars');
+    }
 }

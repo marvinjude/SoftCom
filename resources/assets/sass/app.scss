@@ -39,7 +39,11 @@ body{
 
 .__container-inner {
   padding: 40px;
-  display: inline-block;
+  // display: inline-block;
+  display:flex;
+  align-items:center; 
+  justify-content: center;
+  flex-direction: column;
 }
 
 .__card {
@@ -92,7 +96,15 @@ body{
   white-space: nowrap;
   width: 100%;
   background: #9e9e9e05;
+
+  h1{
+    text-align:center;
+    font-size: 30px;
+    color:grey;
+    font-family:Raleway, san-serif;
+  }
 }
+
 
 .__container-inner button {
   background-color: #ffc107f7;
@@ -118,7 +130,7 @@ body{
 .__container-inner p {
   color: #b9b6b6;
   font-size: 20px;
-  line-height: 1.2em;
+  line-height: 1.3em;
   max-width: 83vh;
   margin-top: 20px;
   padding: 20px;

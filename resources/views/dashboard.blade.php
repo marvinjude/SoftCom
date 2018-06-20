@@ -69,9 +69,9 @@
                         <span class="mdi mdi-star float-right p-1">{{$software->downloads}}</span>
                         <span class="mdi mdi-download float-right p-1">{{$software->stars}}</span>
                     </section>
-                    <section class="product-card-footer">
+                    <!-- <section class="product-card-footer">
                         <a class="btn btn-outline-warning" href="{{route('product', ['id' => $software->id])}}">Download</a>
-                    </section>
+                    </section> -->
                 </section>
             </div>
         </div>

@@ -3,8 +3,9 @@
   @include('layouts/filter-bar')
 @stop 
 @section('content')
-<div class='container'>
+<div class='container' style = "padding-top:80px">
     <div class='row'>
+     @if(count($softwares) > 0)
         @foreach($softwares as $software)
         <div class="col-md-3">
             <div class="__product-card">
@@ -19,12 +20,24 @@
                         <span class="mdi mdi-download float-right p-1">{{$software->stars}}</span>
                     </section>
                     <section class="product-card-footer">
-                        <button class="btn  btn-outline-warning">Download</button>
+                        <button class="btn btn-outline-warning" >
+                           <a href = "{{url('/software/'.$software->id)}}">Download</a>
+                        </button>
                     </section>
                 </section>
             </div>
         </div>
         @endforeach
+     @else
+        <!-- No Result Found -->
+        <div class = "col-md-12" style="height:80vh">
+           <h2 style = "text-align:center;color:grey; font-weight:bold">
+             No Product Matched Your Search -  "{{$term}}"
+           </h2>
+        </div>
+     @endif
+       
+     
     </div>
 </div>
 @stop
