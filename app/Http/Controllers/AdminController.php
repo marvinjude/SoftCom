@@ -8,6 +8,8 @@ use App\User;
 
 use App\Software;
 
+use Illuminate\Support\Facades\DB;
+
 class AdminController extends Controller
 {
     public function index(){
@@ -29,6 +31,6 @@ class AdminController extends Controller
         return Software::orderBy('stars','desc')->first();
     }
     public function getTotalDownloads(){
-        return Software::orderBy('stars')->sum("downloads");
+        return DB::table('software')->sum('downloads');
     }
 }
