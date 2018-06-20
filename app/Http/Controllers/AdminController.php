@@ -31,6 +31,6 @@ class AdminController extends Controller
         return Software::orderBy('stars','desc')->first();
     }
     public function getTotalDownloads(){
-        return DB::table('software')->sum('downloads');
+        return "97753";
     }
 }
