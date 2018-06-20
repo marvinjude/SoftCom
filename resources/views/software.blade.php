@@ -7,7 +7,7 @@
         <div class='row  h-100 card-body'>
             <div class='col-md-4'>
                 <div>
-                    <img src="{{url('storage/images/trading.JPG')}}" class="img-thumbnail" alt="Responsive image">
+                    <img src="https://source.unsplash.com/random" class="img-thumbnail" alt="Responsive image">
                 </div>
             </div>
             <div class='col-md-4'>
