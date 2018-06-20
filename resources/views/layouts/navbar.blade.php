@@ -25,9 +25,16 @@
                 </li>
                 <li class="nav-item dropdown" style= "float:right">
                     <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Marvin jude</a>
+                        aria-expanded="false">{{Auth::user()->company_name}}</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class='dropdown-item'  href={{url( '/logout')}} onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">Logout</a>
+
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+
+            
                     </div>
                 </li>
             </ul>
