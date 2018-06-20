@@ -44,11 +44,10 @@
                             <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
 
                             <div class="col-md-6">
-                                <!-- <select id="category" type="category" class="form-control{{ $errors->has('category') ? ' is-invalid' : '' }}" name="category" value="{{ old('category') }}" required>
+                                <select id="category" type="category" class="form-control{{ $errors->has('category') ? ' is-invalid' : '' }}" name="category" value="{{ old('category') }}" required>
                                     <option>Education</option>
                                     <option>Entertainment</option>
-                               </select> -->
-                               {{Form::select('size',['L'=> 'Leopard'])}}
+                               </select>
                                 @if ($errors->has('category'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('category') }}</strong>

@@ -23,14 +23,17 @@ Route::get('/software/{id}', 'HomeController@software')->name('product');
 Auth::routes();
 
 //Group Routes For Auth Only
+Route::middleware(['auth'])->group(function () {
 
-Route::get('/upload', "UploadController@index")->name('upload');
+   Route::get('/upload', "UploadController@index")->name('upload');
 
-Route::get('/dashboard', "DashboardController@index")->name('dashboard');
+   Route::get('/dashboard', "DashboardController@index")->name('dashboard');
 
-Route::post('/software/star', "SoftwareController@star")->name('star') ;
+   Route::post('/software/star', "SoftwareController@star")->name('star') ;
 
-Route::post('/comment/create', "CommentController@create")->name('create_comment');
+   Route::post('/comment/create', "CommentController@create")->name('create_comment');
+
+});
 
 //End Route Group
 

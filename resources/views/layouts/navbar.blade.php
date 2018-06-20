@@ -1,4 +1,4 @@
-@if(Auth::check())
+@if(Auth::check() && !Request::is('home'))
 <nav class="navbar navbar-expand-lg  navbar-dark bg-purple ">
         <a class="navbar-brand mr-auto mr-lg-0" href="#">
             <img style = "width:30px;height:30px" src="{{asset('storage/images/firebase.png')}}" alt="">
