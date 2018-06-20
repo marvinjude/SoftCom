@@ -18,11 +18,11 @@ class CreateTableSoftware extends Migration
             $table->string('name');
             $table->integer('category_id');
             $table->integer('author_id');  //synonumous to user
-            $table->string('download_link');
+            $table->string('download_link')->nullable();
             $table->text('description');
             $table->decimal('price');
-            $table->string('downloads');
-            $table->integer('stars');
+            $table->string('downloads')->nullable();
+            $table->integer('stars')->nullable();
             $table->timestamps();
         });
     }

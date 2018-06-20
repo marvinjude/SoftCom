@@ -27,6 +27,8 @@ Route::middleware(['auth'])->group(function () {
 
    Route::get('/upload', "UploadController@index")->name('upload');
 
+   Route::post('software', "SoftwareController@store");
+
    Route::get('/dashboard', "DashboardController@index")->name('dashboard');
 
    Route::post('/software/star', "SoftwareController@star")->name('star') ;

@@ -6,11 +6,16 @@ use Illuminate\Http\Request;
 
 use Illuminate\Form;
 
+use Illuminate\Support\Facades\DB;
+
+use App\SoftwareCategory;
+
 class UploadController extends Controller
 {
    public function index(Request $request){
-    // dd($request->input('name'));
-
-       return view('upload');
+       
+        $categories = SoftwareCategory::select('id', 'name')->get();
+  
+       return view('upload')->with('categories', $categories);
    }
 }
